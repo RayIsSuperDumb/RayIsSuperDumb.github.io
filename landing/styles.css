@@ -1,70 +1,181 @@
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    padding: 20px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
-/* Resources Section Styling */
-.resources {
-    margin: 30px;
-}
-
-.resources h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Dropdown Button Container */
-.dropdown {
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    display: inline-block;
 }
 
-/* Dropdown Button Styling */
-.dropdown-btn {
+header .logo h1 {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+header .nav {
+    position: relative;
+}
+
+header .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+header .hamburger span {
+    height: 4px;
+    background-color: white;
+    width: 100%;
+}
+
+header .nav-list {
+    list-style-type: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+header .nav-list li {
+    margin: 0 20px;
+}
+
+header .nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    background: url('your-image.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 10px 20px;
     background-color: #007BFF;
     color: white;
-    padding: 16px;
-    font-size: 16px;
     border: none;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-.dropdown-btn:hover {
+.hero button:hover {
     background-color: #0056b3;
 }
 
-/* Dropdown Menu Styling (Initially Hidden) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.service-card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.contact form {
+    margin-top: 20px;
+}
+
+.contact input,
+.contact textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-/* Dropdown Menu Links Styling */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+.contact button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #218838;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
     font-size: 14px;
 }
 
-/* Change color on hover */
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+/* Mobile and tablet styles */
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list.open {
+        display: flex;
+    }
 }
