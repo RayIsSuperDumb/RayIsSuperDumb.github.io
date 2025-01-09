@@ -1,9 +1,9 @@
-function toggleNav() {
-    const navList = document.getElementById('navList');
-    navList.classList.toggle('open');
+function expandCategory(categoryId) {
+    const categoryLinks = document.getElementById(categoryId);
+    categoryLinks.style.display = 'block';
 }
 
-function redirectToContact() {
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+function collapseCategory(categoryId) {
+    const categoryLinks = document.getElementById(categoryId);
+    categoryLinks.style.display = 'none';
 }
-
