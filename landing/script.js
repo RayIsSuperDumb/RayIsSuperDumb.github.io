@@ -1,16 +1,23 @@
-// Get all category buttons within each category-line
-const categoryLines = document.querySelectorAll('.category-line');
+// scripts.js
+document.addEventListener("DOMContentLoaded", function() {
+    const categories = document.querySelectorAll('.category');
 
-// Add click event listener to each category button
-categoryLines.forEach(line => {
-    line.addEventListener('click', function(e) {
-        // Check if the clicked element is a category button
-        if (e.target.classList.contains('category-btn')) {
-            // Get the category line
-            const line = e.target.closest('.category-line');
-            
-            // Toggle the "open" class on the category line to show/hide the links in all categories in that line
-            line.classList.toggle('open');
-        }
+    categories.forEach(category => {
+        const link = category.querySelector('.category-link');
+        link.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent default link behavior
+
+            // Close all other categories in the same line
+            const line = category.closest('.line');
+            const allCategories = line.querySelectorAll('.category');
+            allCategories.forEach(cat => {
+                if (cat !== category) {
+                    cat.classList.remove('expanded');
+                }
+            });
+
+            // Toggle the expanded state of the clicked category
+            category.classList.toggle('expanded');
+        });
     });
 });
