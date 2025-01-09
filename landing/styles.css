@@ -6,176 +6,87 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
-    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-header .logo h1 {
-    margin-left: 20px;
-    font-size: 24px;
-}
-
-header .nav {
-    position: relative;
-}
-
-header .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-}
-
-header .hamburger span {
-    height: 4px;
-    background-color: white;
-    width: 100%;
-}
-
-header .nav-list {
-    list-style-type: none;
-    display: flex;
-    margin-right: 20px;
-}
-
-header .nav-list li {
-    margin: 0 20px;
-}
-
-header .nav-list li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.hero {
-    background: url('your-image.jpg') no-repeat center center/cover;
+    background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 20px;
 }
 
-.hero h2 {
-    font-size: 36px;
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.hero button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.hero button:hover {
-    background-color: #0056b3;
-}
-
-.services {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #fff;
-}
-
-.service-card {
-    background-color: #f8f8f8;
-    padding: 20px;
+.category {
     width: 30%;
+    background-color: #fff;
+    padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
 }
 
-.service-card h3 {
-    font-size: 24px;
+.category h3 {
+    font-size: 1.5em;
     margin-bottom: 10px;
+    color: #333;
 }
 
-.contact {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #eee;
+.category:hover {
+    transform: scale(1.05);
 }
 
-.contact form {
-    margin-top: 20px;
+ul.links {
+    list-style-type: none;
+    padding: 0;
+    display: none; /* Hide links by default */
 }
 
-.contact input,
-.contact textarea {
-    width: 300px;
-    padding: 10px;
+.category:hover ul.links {
+    display: block; /* Show links on hover */
+}
+
+ul.links li {
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-.contact button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+ul.links li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1em;
+    transition: color 0.3s ease;
 }
 
-.contact button:hover {
-    background-color: #218838;
+ul.links li a:hover {
+    color: #0056b3;
 }
 
-.footer {
+footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 footer p {
-    font-size: 14px;
-}
-
-/* Mobile and tablet styles */
-@media screen and (max-width: 768px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        padding: 20px;
-        border-radius: 5px;
-    }
-
-    .nav-list li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-list.open {
-        display: flex;
-    }
+    font-size: 0.9em;
 }
