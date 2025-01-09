@@ -4,81 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Student Links Page</title>
+    <title>Dropdown Resources</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <h1>Student Links Page</h1>
-        <p>Educational Resources for Students</p>
-    </header>
 
-    <main>
-        <section class="categories">
-            <div class="category" onmouseover="expandCategory('cat1')" onmouseout="collapseCategory('cat1')">
-                <h3>Study Materials</h3>
-                <ul id="cat1" class="links">
-                    <li><a href="#">Textbooks</a></li>
-                    <li><a href="#">Lecture Notes</a></li>
-                    <li><a href="#">Research Papers</a></li>
-                    <li><a href="#">Online Libraries</a></li>
-                </ul>
-            </div>
-            <div class="category" onmouseover="expandCategory('cat2')" onmouseout="collapseCategory('cat2')">
-                <h3>Online Courses</h3>
-                <ul id="cat2" class="links">
-                    <li><a href="#">Coursera</a></li>
-                    <li><a href="#">edX</a></li>
-                    <li><a href="#">Khan Academy</a></li>
-                    <li><a href="#">Udemy</a></li>
-                </ul>
-            </div>
-            <div class="category" onmouseover="expandCategory('cat3')" onmouseout="collapseCategory('cat3')">
-                <h3>Research Tools</h3>
-                <ul id="cat3" class="links">
-                    <li><a href="#">Google Scholar</a></li>
-                    <li><a href="#">JSTOR</a></li>
-                    <li><a href="#">ResearchGate</a></li>
-                    <li><a href="#">PubMed</a></li>
-                </ul>
-            </div>
-        </section>
+    <!-- Resources Section -->
+    <section class="resources">
+        <h2>Resources</h2>
 
-        <section class="categories">
-            <div class="category" onmouseover="expandCategory('cat4')" onmouseout="collapseCategory('cat4')">
-                <h3>Study Groups</h3>
-                <ul id="cat4" class="links">
-                    <li><a href="#">Discord Study Groups</a></li>
-                    <li><a href="#">Reddit Study Threads</a></li>
-                    <li><a href="#">Meetup</a></li>
-                    <li><a href="#">Facebook Study Groups</a></li>
-                </ul>
+        <!-- Dropdown Button for Resources -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Click to See Resources</button>
+            <div class="dropdown-content">
+                <a href="https://www.example.com/guide1" target="_blank">Guide 1</a>
+                <a href="https://www.example.com/guide2" target="_blank">Guide 2</a>
+                <a href="https://www.example.com/tutorial" target="_blank">Tutorial</a>
+                <a href="https://www.example.com/blog" target="_blank">Blog</a>
             </div>
-            <div class="category" onmouseover="expandCategory('cat5')" onmouseout="collapseCategory('cat5')">
-                <h3>Practice Tests</h3>
-                <ul id="cat5" class="links">
-                    <li><a href="#">Quizlet</a></li>
-                    <li><a href="#">Khan Academy Practice</a></li>
-                    <li><a href="#">Magoosh</a></li>
-                    <li><a href="#">Test Prep Websites</a></li>
-                </ul>
-            </div>
-            <div class="category" onmouseover="expandCategory('cat6')" onmouseout="collapseCategory('cat6')">
-                <h3>Programming Resources</h3>
-                <ul id="cat6" class="links">
-                    <li><a href="#">FreeCodeCamp</a></li>
-                    <li><a href="#">Codecademy</a></li>
-                    <li><a href="#">LeetCode</a></li>
-                    <li><a href="#">HackerRank</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>Created for students. All content is freely accessible.</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
