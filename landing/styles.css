@@ -1,87 +1,88 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    padding: 20px;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
 
-/* Links Section */
-.links {
-    margin: 30px;
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-h1 {
-    font-size: 32px;
-    color: #333;
+.line {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
-/* Category Line */
-.category-line {
-    display: flex;
-    gap: 20px;
-}
-
-/* Category Styling */
 .category {
+    position: relative;
     width: 30%;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     overflow: hidden;
-    transition: all 0.3s ease;
-    margin: 0;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Category Button Styling */
-.category-btn {
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    background-color: #007BFF;
+.category a.category-link {
+    display: block;
+    padding: 20px;
+    background-color: #007bff;
     color: white;
-    border: none;
-    text-align: left;
-    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-.category-btn:hover {
+.category a.category-link:hover {
     background-color: #0056b3;
 }
 
-/* Links List Styling (Initially Hidden) */
-.links-list {
+.expand-content {
     display: none;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #f7f7f7;
 }
 
-.links-list a {
-    display: block;
-    color: #007BFF;
+.expand-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expand-content ul li {
+    margin: 5px 0;
+}
+
+.expand-content ul li a {
     text-decoration: none;
-    margin: 8px 0;
-    font-size: 16px;
+    color: #333;
 }
 
-.links-list a:hover {
-    text-decoration: underline;
+.expand-content ul li a:hover {
+    color: #007bff;
 }
 
-/* Transition for Smooth Expansion */
-.category-line.open .category .links-list {
+.category.expanded .expand-content {
     display: block;
+    animation: expandAnimation 0.3s ease-in-out;
 }
 
-/* Ensure smooth animation for expanding categories */
-.category-line.open .category {
-    width: 100%;
+@keyframes expandAnimation {
+    0% {
+        opacity: 0;
+        max-height: 0;
+    }
+    100% {
+        opacity: 1;
+        max-height: 500px;
+    }
 }
