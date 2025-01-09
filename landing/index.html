@@ -4,27 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dropdown Resources</title>
+    <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Resources Section -->
-    <section class="resources">
-        <h2>Resources</h2>
-
-        <!-- Dropdown Button for Resources -->
-        <div class="dropdown">
-            <button class="dropdown-btn">Click to See Resources</button>
-            <div class="dropdown-content">
-                <a href="https://www.example.com/guide1" target="_blank">Guide 1</a>
-                <a href="https://www.example.com/guide2" target="_blank">Guide 2</a>
-                <a href="https://www.example.com/tutorial" target="_blank">Tutorial</a>
-                <a href="https://www.example.com/blog" target="_blank">Blog</a>
+    <header class="header">
+        <div class="logo">
+            <!-- Customize your logo here -->
+            <h1>My Brand</h1>
+        </div>
+        <nav class="nav">
+            <div class="hamburger" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul id="navList" class="nav-list">
+                <!-- Add navigation links here -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <!-- Customize the hero text here -->
+            <h2>Welcome to Our Landing Page</h2>
+            <p>Your perfect solution awaits!</p>
+            <button onclick="redirectToContact()">Get Started</button>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="services" class="services">
+        <div class="service-card">
+            <h3>Service 1</h3>
+            <p>Description of Service 1.</p>
+        </div>
+        <div class="service-card">
+            <h3>Service 2</h3>
+            <p>Description of Service 2.</p>
+        </div>
+        <div class="service-card">
+            <h3>Service 3</h3>
+            <p>Description of Service 3.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h3>Contact Us</h3>
+        <p>Feel free to reach out to us!</p>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 My Brand. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
