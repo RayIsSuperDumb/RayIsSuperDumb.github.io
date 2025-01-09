@@ -4,67 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Landing Page</title>
+    <title>Student Links Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <!-- Customize your logo here -->
-            <h1>My Brand</h1>
-        </div>
-        <nav class="nav">
-            <div class="hamburger" onclick="toggleNav()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul id="navList" class="nav-list">
-                <!-- Add navigation links here -->
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Student Links Page</h1>
+        <p>Educational Resources for Students</p>
     </header>
 
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <!-- Customize the hero text here -->
-            <h2>Welcome to Our Landing Page</h2>
-            <p>Your perfect solution awaits!</p>
-            <button onclick="redirectToContact()">Get Started</button>
-        </div>
-    </section>
+    <main>
+        <section class="categories">
+            <div class="category" onmouseover="expandCategory('cat1')" onmouseout="collapseCategory('cat1')">
+                <h3>Study Materials</h3>
+                <ul id="cat1" class="links">
+                    <li><a href="#">Textbooks</a></li>
+                    <li><a href="#">Lecture Notes</a></li>
+                    <li><a href="#">Research Papers</a></li>
+                    <li><a href="#">Online Libraries</a></li>
+                </ul>
+            </div>
+            <div class="category" onmouseover="expandCategory('cat2')" onmouseout="collapseCategory('cat2')">
+                <h3>Online Courses</h3>
+                <ul id="cat2" class="links">
+                    <li><a href="#">Coursera</a></li>
+                    <li><a href="#">edX</a></li>
+                    <li><a href="#">Khan Academy</a></li>
+                    <li><a href="#">Udemy</a></li>
+                </ul>
+            </div>
+            <div class="category" onmouseover="expandCategory('cat3')" onmouseout="collapseCategory('cat3')">
+                <h3>Research Tools</h3>
+                <ul id="cat3" class="links">
+                    <li><a href="#">Google Scholar</a></li>
+                    <li><a href="#">JSTOR</a></li>
+                    <li><a href="#">ResearchGate</a></li>
+                    <li><a href="#">PubMed</a></li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="services" class="services">
-        <div class="service-card">
-            <h3>Service 1</h3>
-            <p>Description of Service 1.</p>
-        </div>
-        <div class="service-card">
-            <h3>Service 2</h3>
-            <p>Description of Service 2.</p>
-        </div>
-        <div class="service-card">
-            <h3>Service 3</h3>
-            <p>Description of Service 3.</p>
-        </div>
-    </section>
+        <section class="categories">
+            <div class="category" onmouseover="expandCategory('cat4')" onmouseout="collapseCategory('cat4')">
+                <h3>Study Groups</h3>
+                <ul id="cat4" class="links">
+                    <li><a href="#">Discord Study Groups</a></li>
+                    <li><a href="#">Reddit Study Threads</a></li>
+                    <li><a href="#">Meetup</a></li>
+                    <li><a href="#">Facebook Study Groups</a></li>
+                </ul>
+            </div>
+            <div class="category" onmouseover="expandCategory('cat5')" onmouseout="collapseCategory('cat5')">
+                <h3>Practice Tests</h3>
+                <ul id="cat5" class="links">
+                    <li><a href="#">Quizlet</a></li>
+                    <li><a href="#">Khan Academy Practice</a></li>
+                    <li><a href="#">Magoosh</a></li>
+                    <li><a href="#">Test Prep Websites</a></li>
+                </ul>
+            </div>
+            <div class="category" onmouseover="expandCategory('cat6')" onmouseout="collapseCategory('cat6')">
+                <h3>Programming Resources</h3>
+                <ul id="cat6" class="links">
+                    <li><a href="#">FreeCodeCamp</a></li>
+                    <li><a href="#">Codecademy</a></li>
+                    <li><a href="#">LeetCode</a></li>
+                    <li><a href="#">HackerRank</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-    <section id="contact" class="contact">
-        <h3>Contact Us</h3>
-        <p>Feel free to reach out to us!</p>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2025 My Brand. All Rights Reserved.</p>
+    <footer>
+        <p>Created for students. All content is freely accessible.</p>
     </footer>
 
     <script src="scripts.js"></script>
